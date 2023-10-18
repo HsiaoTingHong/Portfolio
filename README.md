@@ -19,3 +19,10 @@
 * 聯絡方式
 <br/>
 
+## 聯絡作者
+你可以透過以下方式與我聯絡
+* [github](https://github.com/HsiaoTingHong)
+* [email](hsiaoting1003@gmail.com) 
+<br/>
+
+
