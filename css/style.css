@@ -1,0 +1,320 @@
+@charset "UTF-8";
+
+/*google font*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-100 {
+    font-weight: 100;
+}
+
+/*共用*/
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    line-height: 1.7;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+#header,
+#about,
+#works {
+    min-height: 100vh;
+}
+
+#about h1,
+#works h1,
+#contact h1 {
+    padding-top: 80px;
+}
+
+#about h5,
+#works h5 span {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+mark {
+    background: linear-gradient(#fff 60%, #5DC7B860 0%);
+    font-weight: bold;
+}
+
+.link-img {
+    width: 35px;
+    margin-left: 20px;
+}
+
+.link-img:hover {
+    width: 38px;
+    transition: 0.5s;
+}
+
+/*navbar*/
+.profile-nav {
+    position: fixed;
+    right: 20px;
+    display: flex;
+    justify-content: end;
+    padding: 15px 0;
+    z-index: 1040;
+    width: 100%;
+    list-style: none;
+    font-size: 1.5rem;
+    background-color: #FFFFFF70;
+    backdrop-filter: blur(5px);
+}
+
+.profile-nav a {
+    color: black;
+}
+
+.profile-nav a:hover {
+    color: #5DC7B8;
+    border-bottom: #5DC7B8 3px solid;
+    font-size: 1.65rem;
+    transition: 0.5s;
+}
+
+.no-border a:hover {
+    border-bottom: transparent;
+}
+
+.link-word {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+/*header*/
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header-photo {
+    width: 35vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 50vh;
+    left: 5vw;
+    z-index: 1030;
+    transform: translateY(-50%);
+    filter: grayscale(1);
+}
+
+/* 创建一个 keyframes 动画，定义文字的左到右移动 */
+@keyframes slideUp {
+    0% {
+        transform: translateX(100%);
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+}
+
+.header-name {
+    font-size: 5rem;
+    text-decoration: underline 15px #5DC7B860;
+    text-shadow: -2px -2px white, 2px 2px lightgray;
+    text-wrap: nowrap;
+    position: absolute;
+    top: 48vh;
+    left: 38vw;
+    z-index: 1030;
+    transform: translateY(-50%);
+    animation: slideUp 1s ease-in-out;
+}
+
+.header-name:hover {
+    font-size: 5.35rem;
+    transition: 0.5s;
+}
+
+.header-name span {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/*about&works*/
+#about span,
+#works span {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#about mark:hover {
+    background: linear-gradient(#fff 60%, #00000015 0%);
+    color: #5DC7B8;
+    font-size: 1.3rem;
+    transition: 0.5s;
+}
+
+#works img {
+    width: 90%;
+    box-shadow: 0.5em 0.5em 0.5em darkgrey;
+}
+
+#works img:hover {
+    width: 95%;
+    transition: 0.5s;
+}
+
+/*
+@keyframes fadeInUp {
+    0% {
+        transform: translateX(100%);
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.fadeInUp2 {
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.2s;
+}
+
+.fadeInUp3 {
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.4s;
+}
+
+.fadeInUp4 {
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.6s;
+}
+*/
+
+/*contact&works*/
+#contact {
+    min-height: 50vh;
+}
+
+#contact a,
+#works a {
+    color: black;
+}
+
+#contact a:hover {
+    color: #5DC7B8;
+    font-size: 1.05rem;
+    transition: 0.5s;
+}
+
+#contact mark:hover,
+#works mark:hover {
+    background: linear-gradient(#fff 60%, #00000015 0%);
+    color: #5DC7B8;
+    font-size: 1.05rem;
+    transition: 0.5s;
+}
+
+/*back-top*/
+.back-top {
+    margin-right: 20px;
+}
+
+/*footer*/
+footer {
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 767px) {
+
+    /*navbar*/
+    .profile-nav {
+        right: 5vw;
+        flex-direction: column;
+        align-items: end;
+        text-wrap: nowrap;
+        width: 35%;
+    }
+
+    .profile-nav .link-img {
+        display: none;
+    }
+
+    /*header*/
+    .header-photo {
+        width: 90vw;
+        top: 40vh;
+        left: 0;
+    }
+
+    .header-name {
+        top: 65vh;
+        left: 5vw;
+        font-size: 3.5rem;
+        text-shadow: -1px -1px white, 1px 1px lightgray;
+    }
+
+    .header-name:hover {
+        font-size: 3.8rem;
+    }
+
+
+    /*contact*/
+    #contact .link-img {
+        margin-left: 0;
+    }
+
+    /*back-top*/
+    .back-top {
+        margin-bottom: 15px;
+    }
+
+    /*footer*/
+    footer {
+        font-size: 0.75rem;
+    }
+
+}
