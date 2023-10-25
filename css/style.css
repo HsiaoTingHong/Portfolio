@@ -90,7 +90,7 @@ mark {
     right: 20px;
     display: flex;
     justify-content: end;
-    padding: 15px 0;
+    padding: 15px 0 15px 20px;
     z-index: 1040;
     width: 100%;
     list-style: none;
@@ -127,7 +127,7 @@ mark {
 }
 
 .header-photo {
-    width: 35vw;
+    width: 30vw;
     border-radius: 50%;
     position: absolute;
     top: 50vh;
@@ -137,7 +137,7 @@ mark {
     filter: grayscale(1);
 }
 
-/* 创建一个 keyframes 动画，定义文字的左到右移动 */
+/* 文字從下到上移動 */
 @keyframes slideUp {
     0% {
         transform: translateX(100%);
@@ -153,25 +153,23 @@ mark {
 }
 
 .header-name {
-    font-size: 5rem;
-    text-decoration: underline 15px #5DC7B860;
+    font-size: 3.5rem;
     text-shadow: -2px -2px white, 2px 2px lightgray;
     text-wrap: nowrap;
+    line-height: 1.5;
+    color: #5DC7B8;
     position: absolute;
-    top: 48vh;
-    left: 38vw;
+    top: 50vh;
+    left: 30vw;
     z-index: 1030;
     transform: translateY(-50%);
     animation: slideUp 1s ease-in-out;
 }
 
-.header-name:hover {
-    font-size: 5.35rem;
-    transition: 0.5s;
-}
-
 .header-name span {
     font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2rem;
+    color: black;
 }
 
 /*about&works*/
@@ -196,41 +194,6 @@ mark {
     width: 95%;
     transition: 0.5s;
 }
-
-/*
-@keyframes fadeInUp {
-    0% {
-        transform: translateX(100%);
-        transform: translateY(100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0);
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.fadeInUp {
-    animation: fadeInUp 1s ease-in-out;
-}
-
-.fadeInUp2 {
-    animation: fadeInUp 1s ease-in-out;
-    animation-delay: 0.2s;
-}
-
-.fadeInUp3 {
-    animation: fadeInUp 1s ease-in-out;
-    animation-delay: 0.4s;
-}
-
-.fadeInUp4 {
-    animation: fadeInUp 1s ease-in-out;
-    animation-delay: 0.6s;
-}
-*/
 
 /*contact&works*/
 #contact {
@@ -268,6 +231,18 @@ footer {
     font-size: 0.9rem;
 }
 
+@media screen and (max-width: 912px) {
+
+    /*header*/
+    .header-name {
+        font-size: 3rem;
+    }
+
+    .header-name span {
+        font-size: 1.75rem;
+    }
+}
+
 @media screen and (max-width: 767px) {
 
     /*navbar*/
@@ -292,15 +267,10 @@ footer {
 
     .header-name {
         top: 65vh;
-        left: 5vw;
-        font-size: 3.5rem;
+        left: 2.5vw;
+        font-size: 2rem;
         text-shadow: -1px -1px white, 1px 1px lightgray;
     }
-
-    .header-name:hover {
-        font-size: 3.8rem;
-    }
-
 
     /*contact*/
     #contact .link-img {
