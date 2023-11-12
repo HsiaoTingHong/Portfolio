@@ -135,6 +135,7 @@ mark {
     z-index: 1030;
     transform: translateY(-50%);
     filter: grayscale(1);
+    box-shadow: 0.5em 0.5em 0.5em lightgray;
 }
 
 /* 文字從下到上移動 */
@@ -164,6 +165,10 @@ mark {
     z-index: 1030;
     transform: translateY(-50%);
     animation: slideUp 1s ease-in-out;
+}
+
+.header-name p {
+    text-wrap: nowrap;
 }
 
 .header-name span {
@@ -235,7 +240,7 @@ footer {
 
     /*header*/
     .header-name {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .header-name span {
