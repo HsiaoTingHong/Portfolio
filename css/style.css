@@ -134,7 +134,7 @@ mark {
     left: 5vw;
     z-index: 1030;
     transform: translateY(-50%);
-    filter: grayscale(1);
+    /* filter: grayscale(1);*/
     box-shadow: 0.5em 0.5em 0.5em lightgray;
 }
 
