@@ -12,18 +12,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="image/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="image/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="image/favicon_io/site.webmanifest">
-    <!--bootstrap css&js-->
+    <!--bootstrap css-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <Script src="js/bootstrap.bundle.min.js"></Script>
     <!--animate css-->
     <link rel="stylesheet" href="css/animate.css">
     <!--css-->
     <link rel="stylesheet" href="css/style.css">
-    <!--wow js-->
-    <script src="js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
 </head>
 
 <body>
@@ -182,9 +176,27 @@
 
     <!--footer-->
     <footer class="wrapper">
-        <p><small>Copyright © 2023 Hsiao Ting Hong. All rights reserved.</small></p>
+        <p><small></small></p>
     </footer>
 
 </body>
+
+<!--bootstrap js-->
+<Script src="js/bootstrap.bundle.min.js"></Script>
+<!--wow js-->
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+
+    // 取得年份
+    function getNowYear() {
+        const today = new Date();
+        return today.getFullYear();
+    }
+    const nowYear = getNowYear();
+    const footer = document.querySelector('footer');
+    const small = footer.querySelector('small');
+    small.innerHTML = `Copyright ${nowYear}. Hsiao Ting Hong. All rights reserved.`;
+</script>
 
 </html>
