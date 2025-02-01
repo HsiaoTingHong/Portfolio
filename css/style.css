@@ -127,7 +127,7 @@ mark {
 }
 
 .header-photo {
-    width: 30vw;
+    width: 25vw;
     border-radius: 50%;
     position: absolute;
     top: 50vh;
@@ -265,9 +265,9 @@ footer {
 
     /*header*/
     .header-photo {
-        width: 90vw;
+        width: 60vw;
         top: 40vh;
-        left: 0;
+        left: 16%;
     }
 
     .header-name {
